@@ -56,4 +56,6 @@ body {
 
 .btn {
   display: inline-block;
+  background-color: var(--primary-colour-dark);
+  font-size: 16px;
 }
