@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap");
+
+:root {
+  --primary-colour: #ecdd7b;
+  --secondary-colour: #000009;
+  --tertiary-colour: #c1cfda;
+  --primary-colour-dark: #ecd648;
+  --secondary-colour-light: #f3f3f3;
+  --tertiary-colour-dark: #9dbdd6;
+  --primary-colour-opacity: #ecdd7b4c;
+  --secondary-colour-opacity: #00000936;
+  --tertiary-colour-opacity: #c1cfda39;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* for the baseFontSize */
+  font-size: 65%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 250;
+  background-color: #f3f3f3;
+}
+
+/* Common properties */
+.section {
+  padding: 100px 25px;
+  border-top: 1px solid white;
+  transition: transform 1s, opacity 1s;
+}
