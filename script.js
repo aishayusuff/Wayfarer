@@ -1,7 +1,9 @@
 //Element selections
 const nav = document.querySelector(".nav");
+const btnScroll = document.querySelector(".btn-scroll");
+const section1 = document.getElementById("section-1");
 
-//Menu Fade
+//MENU FADE
 const handlesHover = function (e) {
   let opacityValue = this;
   if (e.target.classList.contains("nav-link")) {
@@ -24,3 +26,8 @@ nav.addEventListener("mouseover", handlesHover.bind(0.5));
 
 //removes fade
 nav.addEventListener("mouseout", handlesHover.bind(1));
+
+//BUTTON SCROLL TO
+btnScroll.addEventListener("click", (e) =>
+  section1.scrollIntoView({ behavior: "smooth" })
+);
