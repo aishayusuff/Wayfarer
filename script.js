@@ -23,11 +23,10 @@ const handlesHover = function (e) {
 
 //Adds fade
 nav.addEventListener("mouseover", handlesHover.bind(0.5));
-
 //removes fade
 nav.addEventListener("mouseout", handlesHover.bind(1));
 
-//BUTTON SCROLL TO
+//BUTTON SCROLL-TO
 btnScroll.addEventListener("click", (e) =>
   section1.scrollIntoView({ behavior: "smooth" })
 );
