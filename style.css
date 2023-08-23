@@ -37,6 +37,7 @@ body {
 .section-title {
   max-width: 75rem;
   margin: 0 auto 7rem auto;
+  max-width: 60%;
 }
 
 .section-description {
@@ -48,7 +49,7 @@ body {
 }
 
 .section-header {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.3;
 }
