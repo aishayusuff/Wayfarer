@@ -99,7 +99,6 @@ header {
   height: 4rem;
   transition: all 0.2s;
   margin-right: 1rem;
-  margin-left: 101rempx;
 }
 
 .name {
@@ -148,7 +147,7 @@ header {
 }
 
 .right-side {
-  transform: translateY(6rem);
+  transform: translateY(4rem);
   margin-left: 3rem;
 }
 
@@ -170,7 +169,7 @@ h4 {
   font-weight: 400;
   border: none;
   border-bottom: 1px solid;
-  width: 14%;
+  width: fit-content;
   cursor: pointer;
   transition: all 0.2s;
   margin-top: 1.8rem;
@@ -197,7 +196,7 @@ h4 {
 }
 
 .services-tab-active {
-  transform: translateY(-66%);
+  transform: translateY(-69%);
 }
 
 .services-content {
