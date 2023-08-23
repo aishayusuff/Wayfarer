@@ -30,3 +30,30 @@ nav.addEventListener("mouseout", handlesHover.bind(1));
 btnScroll.addEventListener("click", (e) =>
   section1.scrollIntoView({ behavior: "smooth" })
 );
+
+//TABBED COMPONENTS
+
+const tabs = document.querySelectorAll(".services-tab");
+const tabContainer = document.querySelector(".services-btn-container");
+const contents = document.querySelectorAll(".services-content");
+
+//add active to clicked tab in tab container - event listener
+tabContainer.addEventListener("click", function (e) {
+  let clicked = e.target.closest(".services-tab");
+
+  if (clicked) {
+    //removes active class from tabs
+    tabs.forEach((tab) => tab.classList.remove("services-tab-active"));
+    clicked.classList.add("services-tab-active");
+
+    // remove active class from all service content
+    console.log(clicked.dataset.tab);
+
+    contents.forEach((cont) =>
+      cont.classList.remove("services-content-active")
+    );
+    document
+      .querySelector(`.services-content-${clicked.dataset.tab}`)
+      .classList.add("services-content-active");
+  }
+});
