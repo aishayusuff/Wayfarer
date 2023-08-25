@@ -37,7 +37,7 @@ const tabs = document.querySelectorAll(".services-tab");
 const tabContainer = document.querySelector(".services-btn-container");
 const contents = document.querySelectorAll(".services-content");
 
-//add active to clicked tab in tab container - event listener
+//adds active to clicked tab in tab container - event listener
 tabContainer.addEventListener("click", function (e) {
   let clicked = e.target.closest(".services-tab");
 
@@ -47,11 +47,11 @@ tabContainer.addEventListener("click", function (e) {
     clicked.classList.add("services-tab-active");
 
     // remove active class from all service content
-    console.log(clicked.dataset.tab);
-
     contents.forEach((cont) =>
       cont.classList.remove("services-content-active")
     );
+
+    //adds active to content corresponding tab clicked
     document
       .querySelector(`.services-content-${clicked.dataset.tab}`)
       .classList.add("services-content-active");
