@@ -235,7 +235,7 @@ h4 {
 /* footer */
 .footer {
   color: var(--secondary-colour);
-  padding: 10rem 4rem 0 4rem;
+  padding: 0 4rem 2rem 4rem;
 }
 
 .footer-nav {
@@ -257,7 +257,7 @@ h4 {
 .footer-logo {
   height: 4rem;
   display: block;
-  margin: 8rem auto;
+  margin: 5rem auto;
 }
 
 .footer-copyright .github-link {
