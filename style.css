@@ -29,7 +29,7 @@ body {
 
 /* Common properties */
 .section {
-  padding: 15rem 3rem;
+  padding: 12rem 3rem;
   border-top: 1px solid white;
   transition: transform 1s, opacity 1s;
 }
@@ -233,9 +233,9 @@ h4 {
 }
 
 /* footer */
-footer {
+.footer {
   color: var(--secondary-colour);
-  padding: 12rem 4rem;
+  padding: 10rem 4rem 0 4rem;
 }
 
 .footer-nav {
@@ -246,4 +246,25 @@ footer {
 
 .footer-item {
   margin-right: 3rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--secondary-colour);
+}
+
+.footer-logo {
+  height: 4rem;
+  display: block;
+  margin: 8rem auto;
+}
+
+.footer-copyright .github-link {
+  font-size: 0.8rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--primary-colour-dark);
 }
