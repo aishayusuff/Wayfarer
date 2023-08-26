@@ -2,29 +2,48 @@
 const nav = document.querySelector(".nav");
 const btnScroll = document.querySelector(".btn-scroll");
 const section1 = document.getElementById("section-1");
+const footerNav = document.querySelector(".footer-nav");
 
 //MENU FADE
-const handlesHover = function (e) {
-  let opacityValue = this;
-  if (e.target.classList.contains("nav-link")) {
-    const siblings = e.target.closest(".nav").querySelectorAll(".nav-link");
-    const logo = e.target.closest(".nav").querySelector(".nav-logo");
-    const brandName = e.target.closest(".nav").querySelector(".name");
+const handlesHover = function (opacityValue, nav, link, linkClass, e) {
+  if (e.target.classList.contains(link)) {
+    const siblings = e.target.closest(nav).querySelectorAll(linkClass);
+    const logo = e.target.closest(nav).querySelector(".nav-logo");
+    const brandName = e.target.closest(nav).querySelector(".name");
 
     siblings.forEach(function (el) {
       if (el !== e.target) {
         el.style.opacity = opacityValue;
       }
     });
-    logo.style.opacity = opacityValue;
-    brandName.style.opacity = opacityValue;
+    if (nav === ".nav") {
+      logo.style.opacity = opacityValue;
+      brandName.style.opacity = opacityValue;
+    }
   }
 };
 
-//Adds fade
-nav.addEventListener("mouseover", handlesHover.bind(0.5));
-//removes fade
-nav.addEventListener("mouseout", handlesHover.bind(1));
+//Adds fade to Header
+nav.addEventListener(
+  "mouseover",
+  handlesHover.bind(null, 0.5, ".nav", "nav-link", ".nav-link")
+);
+//removes fade from Header
+nav.addEventListener(
+  "mouseout",
+  handlesHover.bind(null, 1, ".nav", "nav-link", ".nav-link")
+);
+
+//Adds fade to Footer
+footerNav.addEventListener(
+  "mouseover",
+  handlesHover.bind(null, 0.5, ".footer-nav", "footer-link", ".footer-link")
+);
+//removes fade from Footer
+footerNav.addEventListener(
+  "mouseout",
+  handlesHover.bind(null, 1, ".footer-nav", "footer-link", ".footer-link")
+);
 
 //BUTTON SCROLL-TO
 btnScroll.addEventListener("click", (e) =>
