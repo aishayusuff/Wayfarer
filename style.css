@@ -232,6 +232,50 @@ h4 {
   margin-right: auto;
 }
 
+/* slider */
+.slider {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100rem;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 30rem;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  color: var(--secondary-colour);
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider-btn--right {
+  left: 6%;
+  transform: translate(50%, -50%);
+}
 /* footer */
 .footer {
   color: var(--secondary-colour);
