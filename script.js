@@ -82,6 +82,7 @@ tabContainer.addEventListener("click", function (e) {
 //Creates dots
 const slides = document.querySelectorAll(".slide");
 const dotContainer = document.querySelector(".dots");
+const btnRight = document.querySelector(".slider-btn--right");
 
 const createsDots = function () {
   slides.forEach(function (_, i) {
@@ -99,8 +100,24 @@ createsDots();
 // Shows slides based on which slide on currently, and move to another slide
 
 let currentSlide = 0;
-const slideMaxLength = slides.length;
+const slideLength = slides.length;
+console.log(slideLength);
 
-slides.forEach(function (s, i) {
-  s.style.transform = `translateX(${100 * i - currentSlide}%)`;
-});
+const goToSlide = function (slide) {
+  slides.forEach(function (s, i) {
+    s.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+};
+
+const nextSlide = function () {
+  if (currentSlide === slideLength - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+    console.log(currentSlide);
+  }
+  goToSlide(currentSlide);
+};
+
+goToSlide(currentSlide);
+btnRight.addEventListener("click", nextSlide);
