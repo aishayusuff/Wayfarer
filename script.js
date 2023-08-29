@@ -76,3 +76,31 @@ tabContainer.addEventListener("click", function (e) {
       .classList.add("services-content-active");
   }
 });
+
+//Slider
+
+//Creates dots
+const slides = document.querySelectorAll(".slide");
+const dotContainer = document.querySelector(".dots");
+
+const createsDots = function () {
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      "beforeend",
+      `<button class="dots-dot dots-dot--active" data-slide="${i}"></button>`
+    );
+  });
+};
+
+createsDots();
+
+//Activate the slides on click event AND when slides show on arrow click and keyboard click
+
+// Shows slides based on which slide on currently, and move to another slide
+
+let currentSlide = 0;
+const slideMaxLength = slides.length;
+
+slides.forEach(function (s, i) {
+  s.style.transform = `translateX(${100 * i - currentSlide}%)`;
+});

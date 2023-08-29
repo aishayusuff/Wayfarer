@@ -188,6 +188,7 @@ h4 {
 .services-btn-container {
   display: flex;
   justify-content: center;
+  transition: transform 1s;
 }
 
 .services-tab {
@@ -237,6 +238,7 @@ h4 {
   position: relative;
   margin: 0 auto;
   max-width: 100rem;
+  height: 30rem;
   overflow: hidden;
 }
 
@@ -247,39 +249,58 @@ h4 {
   align-items: center;
   top: 0;
   width: 100%;
-  height: 30rem;
+  pointer-events: none;
+  /* height: 10rem; */
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  /* object-fit: contain; */
+}
+
+.slide h6 {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  margin-top: 2rem;
 }
 .slider-btn {
   position: absolute;
   top: 50%;
   color: var(--secondary-colour);
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
+  background-color: var(--primary-colour-opacity);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
   z-index: 10;
-  border: none;
+  border-radius: 60%;
   cursor: pointer;
 }
 
 .slider-btn--left {
-  left: 6%;
+  left: 20%;
   transform: translate(-50%, -50%);
 }
 
 .slider-btn--right {
-  left: 6%;
+  right: 25%;
   transform: translate(50%, -50%);
 }
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-100%);
+  display: flex;
+}
+
 /* footer */
 .footer {
   color: var(--secondary-colour);
   padding: 0 4rem 2rem 4rem;
+  /* margin-top: 18rem; */
 }
 
 .footer-nav {
