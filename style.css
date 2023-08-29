@@ -250,7 +250,7 @@ h4 {
   top: 0;
   width: 100%;
   pointer-events: none;
-  /* height: 10rem; */
+  transition: transform 1s;
 }
 
 .slide img {

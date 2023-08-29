@@ -3,6 +3,10 @@ const nav = document.querySelector(".nav");
 const btnScroll = document.querySelector(".btn-scroll");
 const section1 = document.getElementById("section-1");
 const footerNav = document.querySelector(".footer-nav");
+const slides = document.querySelectorAll(".slide");
+const dotContainer = document.querySelector(".dots");
+const btnRight = document.querySelector(".slider-btn--right");
+const btnLeft = document.querySelector(".slider-btn--left");
 
 //MENU FADE
 const handlesHover = function (opacityValue, nav, link, linkClass, e) {
@@ -80,9 +84,6 @@ tabContainer.addEventListener("click", function (e) {
 //Slider
 
 //Creates dots
-const slides = document.querySelectorAll(".slide");
-const dotContainer = document.querySelector(".dots");
-const btnRight = document.querySelector(".slider-btn--right");
 
 const createsDots = function () {
   slides.forEach(function (_, i) {
@@ -93,15 +94,12 @@ const createsDots = function () {
   });
 };
 
-createsDots();
-
 //Activate the slides on click event AND when slides show on arrow click and keyboard click
 
 // Shows slides based on which slide on currently, and move to another slide
 
 let currentSlide = 0;
 const slideLength = slides.length;
-console.log(slideLength);
 
 const goToSlide = function (slide) {
   slides.forEach(function (s, i) {
@@ -119,5 +117,23 @@ const nextSlide = function () {
   goToSlide(currentSlide);
 };
 
+const prevSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = slideLength - 1;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(currentSlide);
+};
+
+//Initial condition
+createsDots();
 goToSlide(currentSlide);
+
+//Event handlers
 btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") nextSlide();
+  if (e.key === "ArrowLeft") prevSlide();
+});
