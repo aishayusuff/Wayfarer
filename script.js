@@ -84,7 +84,6 @@ tabContainer.addEventListener("click", function (e) {
 //Slider
 
 //Creates dots
-
 const createsDots = function () {
   slides.forEach(function (_, i) {
     dotContainer.insertAdjacentHTML(
@@ -95,9 +94,6 @@ const createsDots = function () {
 };
 
 //Activate the slides on click event AND when slides show on arrow click and keyboard click
-
-// Shows slides based on which slide on currently, and move to another slide
-
 let currentSlide = 0;
 const slideLength = slides.length;
 

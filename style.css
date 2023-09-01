@@ -250,6 +250,7 @@ h4 {
   top: 0;
   width: 100%;
   pointer-events: none;
+  /* pointer-events: this helped me solve the issue i had with image displaying correctly when using posiiton: absolute */
   transition: transform 1s;
 }
 
