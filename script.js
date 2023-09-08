@@ -7,6 +7,10 @@ const slides = document.querySelectorAll(".slide");
 const dotContainer = document.querySelector(".dots");
 const btnRight = document.querySelector(".slider-btn--right");
 const btnLeft = document.querySelector(".slider-btn--left");
+const modal = document.querySelector(".modal");
+const btnOpenModal = document.querySelector(".btn-show-modal");
+const btnCloseModal = document.querySelector(".btn-close-modal");
+const overlay = document.querySelector(".overlay");
 
 //MENU FADE
 const handlesHover = function (opacityValue, nav, link, linkClass, e) {
