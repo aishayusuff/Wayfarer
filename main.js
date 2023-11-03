@@ -1,8 +1,8 @@
+import { initialisesMenuFade } from "./modules/menuFade.js";
+
 //Element selections
-const nav = document.querySelector(".nav");
 const btnScroll = document.querySelector(".btn-scroll");
 const section1 = document.getElementById("section-1");
-const footerNav = document.querySelector(".footer-nav");
 const slides = document.querySelectorAll(".slide");
 const dotContainer = document.querySelector(".dots");
 const btnRight = document.querySelector(".slider-btn--right");
@@ -12,46 +12,11 @@ const btnOpenModal = document.querySelector(".btn-show-modal");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const overlay = document.querySelector(".overlay");
 
-//MENU FADE
-const handlesHover = function (opacityValue, nav, link, linkClass, e) {
-  if (e.target.classList.contains(link)) {
-    const siblings = e.target.closest(nav).querySelectorAll(linkClass);
-    const logo = e.target.closest(nav).querySelector(".nav-logo");
-    const brandName = e.target.closest(nav).querySelector(".name");
+//Fades header menu
+initialisesMenuFade(".nav", "nav-link", ".nav-link");
 
-    siblings.forEach(function (el) {
-      if (el !== e.target) {
-        el.style.opacity = opacityValue;
-      }
-    });
-    if (nav === ".nav") {
-      logo.style.opacity = opacityValue;
-      brandName.style.opacity = opacityValue;
-    }
-  }
-};
-
-//Adds fade to Header
-nav.addEventListener(
-  "mouseover",
-  handlesHover.bind(null, 0.5, ".nav", "nav-link", ".nav-link")
-);
-//removes fade from Header
-nav.addEventListener(
-  "mouseout",
-  handlesHover.bind(null, 1, ".nav", "nav-link", ".nav-link")
-);
-
-//Adds fade to Footer
-footerNav.addEventListener(
-  "mouseover",
-  handlesHover.bind(null, 0.5, ".footer-nav", "footer-link", ".footer-link")
-);
-//removes fade from Footer
-footerNav.addEventListener(
-  "mouseout",
-  handlesHover.bind(null, 1, ".footer-nav", "footer-link", ".footer-link")
-);
+//Fades footer menu
+initialisesMenuFade(".footer-nav", "footer-link", ".footer-link");
 
 //BUTTON SCROLL-TO
 btnScroll.addEventListener("click", (e) =>
