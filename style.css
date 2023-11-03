@@ -147,12 +147,12 @@ header {
 }
 
 .right-side {
-  transform: translateY(4rem);
+  transform: translateY(2rem);
   margin-left: 3rem;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
@@ -285,7 +285,7 @@ h4 {
 }
 
 .slider-btn--right {
-  right: 25%;
+  right: 20%;
   transform: translate(50%, -50%);
 }
 
@@ -407,4 +407,27 @@ h4 {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+  .nav {
+    height: 6rem;
+  }
+
+  .nav-logo {
+    height: 3rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header-title {
+    grid-template-columns: 1fr 2fr; /* Adjust the columns as needed */
+  }
 }
