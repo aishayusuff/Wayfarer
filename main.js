@@ -53,6 +53,7 @@ tabContainer.addEventListener("click", function (e) {
 //Slider
 
 //Creates dots
+/*
 const createsDots = function () {
   slides.forEach(function (_, i) {
     dotContainer.insertAdjacentHTML(
@@ -61,6 +62,7 @@ const createsDots = function () {
     );
   });
 };
+*/
 
 //Activate the slides on click event AND when slides show on arrow click and keyboard click
 let currentSlide = 0;
@@ -92,7 +94,7 @@ const prevSlide = function () {
 };
 
 //Initial condition
-createsDots();
+// createsDots();
 goToSlide(currentSlide);
 
 //Event handlers

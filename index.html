@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/svg" href="./icons/rocket-outline.svg" />
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js" defer></script>
+    <script type="module" src="main.js"></script>
   </head>
   
   <body>
@@ -24,11 +24,39 @@
           </li>
           <li>
             <a class="nav-link nav-link--btn btn-show-modal" href="#"
-              >Join us!</a
-            >
+              >Join us!</a>
           </li>
         </ul>
       </nav>
+
+      <div id="hamburger">
+        <div class="hamburger-logo">
+          <img src="./icons/rocket-outline.svg" class="nav-logo" alt="Wayfarer logo" />
+          <h2 class="name">Wayfarer</h2>
+        </div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hamburger-nav-links">
+            <li>
+              <a class="nav-link" href="#section-1">About</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#section-2">Services</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#section-3">Testimonials</a>
+            </li>
+            <li>
+              <a class="nav-link nav-link--btn btn-show-modal" href="#"
+                >Join us!</a>
+            </li>
+          </div>
+        </div>
+      </div>
 
       <div class="header-title">
         <img src="imgs/traveles-tools-table_23-2148436360.avif" class="header-img" alt="travel the world image">
@@ -154,8 +182,7 @@
 
             <button class="slider-btn slider-btn--left">&larr;</button>
             <button class="slider-btn slider-btn--right">&rarr;</button>
-            <div class="dots">
-            </div>
+            
           </div>
         </section>
         <!-- last section -->
