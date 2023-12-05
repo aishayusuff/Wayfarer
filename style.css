@@ -120,10 +120,14 @@ header {
   color: var(--secondary-colour);
 }
 
+.nav-links > li:last-child .nav-link {
+  margin-left: 1.5rem;
+}
+
 .nav-link--btn {
   background-color: var(--primary-colour);
   border-radius: 2.5rem;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
 }
 
 .nav-link--btn:hover {
