@@ -160,12 +160,20 @@ header {
   width: fit-content;
   top: 100%;
   right: 0;
-  background-color: var(--tertiary-colour);
+  background-color: var(--primary-colour-dark);
+  list-style: none;
 }
 
 .hamburger-nav-links a {
   display: block;
   text-align: center;
+  text-decoration: none;
+}
+
+.hamburger-nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: white
 }
 
 .header-title {
@@ -468,11 +476,14 @@ h4 {
   #hamburger {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
+    width: 100%;
   }
 
   .hamburger-logo {
     display: flex;
     justify-content: space-between;
+    left: 0;
   }
 }
 
