@@ -1,4 +1,5 @@
 import { initialisesMenuFade } from "./modules/menuFade.js";
+import { opensHamburger } from "./modules/hamburgerMenu.js";
 
 //Element selections
 const btnScroll = document.querySelector(".btn-scroll");
@@ -11,6 +12,7 @@ const modal = document.querySelector(".modal");
 const btnOpenModal = document.querySelector(".btn-show-modal");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const overlay = document.querySelector(".overlay");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 
 //Fades header menu
 initialisesMenuFade(".nav", "nav-link", ".nav-link");
@@ -126,3 +128,6 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+//Opens Hamburger menu
+opensHamburger(hamburgerMenu);

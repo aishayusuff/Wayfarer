@@ -152,6 +152,7 @@ header {
   width: 1.5rem;
   background-color: var(--secondary-colour);
   margin-top: 0.3rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger-menu {
@@ -178,6 +179,22 @@ header {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   color: white
+}
+
+.hamburger-icon.open  {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(5px, -6px);
 }
 
 .header-title {
@@ -480,7 +497,7 @@ h4 {
   #hamburger {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     width: 100%;
   }
 
