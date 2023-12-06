@@ -5,7 +5,6 @@ import { opensHamburger } from "./modules/hamburgerMenu.js";
 const btnScroll = document.querySelector(".btn-scroll");
 const section1 = document.getElementById("section-1");
 const slides = document.querySelectorAll(".slide");
-const dotContainer = document.querySelector(".dots");
 const btnRight = document.querySelector(".slider-btn--right");
 const btnLeft = document.querySelector(".slider-btn--left");
 const modal = document.querySelector(".modal");
