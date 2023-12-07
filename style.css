@@ -161,6 +161,7 @@ header {
 
 .hamburger-nav-links {
   position: fixed;
+  display: none;
   overflow: hidden;
   z-index: 1000;
   top: 70%;
@@ -169,11 +170,16 @@ header {
   list-style: none;
 }
 
+.hamburger-nav-links.open {
+  display: block;
+}
+
 .hamburger-nav-links a {
   display: block;
   text-align: center;
   margin-bottom: 1rem;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .hamburger-nav-links a:hover {
@@ -181,6 +187,7 @@ header {
   text-underline-offset: 0.5rem;
   color: white
 }
+
 
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(5px, 6px);
